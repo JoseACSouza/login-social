@@ -38,6 +38,29 @@
                 android:visibility="visible"
                 app:srcCompat="@drawable/logo"
                 tools:srcCompat="@drawable/logo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:hint="Email"
+                app:startIconContentDescription="email-icon"
+                app:startIconDrawable="@drawable/email_icon_24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="@string/email"
+                    android:imeActionLabel="Email"
+                    android:inputType="text"
+                    android:singleLine="false"
+                    android:visibility="visible"
+                    app:textInputLayoutFocusedRectEnabled="false"
+                    tools:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
