@@ -20,7 +20,7 @@
 
         <LinearLayout
             android:id="@+id/linear_container"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -32,7 +32,7 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="50dp"
                 android:contentDescription="@string/app_name"
@@ -92,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:backgroundTint="#4CAF50"
-                android:text="Entrar"
                 android:enabled="false"
+                android:text="Entrar"
                 app:rippleColor="#4CAF50" />
 
             <Button
@@ -104,9 +104,21 @@
                 android:text="Esqueceu a senha?"
                 android:textColor="#4CAF50"
                 app:iconTint="#4CAF50" />
-            
         </LinearLayout>
 
+        <Button
+            android:id="@+id/sign_up_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="369dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Criar nova conta"
+            android:textColor="#4CAF50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
