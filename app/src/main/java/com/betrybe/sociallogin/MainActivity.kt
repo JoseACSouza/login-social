@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val email:TextInputEditText by lazy { findViewById(R.id.email_text_input) }
     private val emailError: TextInputLayout by lazy { findViewById(R.id.email_text_input_layout) }
     private val password:TextInputEditText by lazy { findViewById(R.id.password_text_input) }
+    private val passwordError:TextInputLayout
+        by lazy { findViewById(R.id.password_text_input_layout) }
     private val submit:Button by lazy { findViewById(R.id.login_button) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +37,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.login_button -> {
                 val emailRegex = "^[A-Za-z0-9.]+@[A-Za-z]+.[A-Za-z]+"
                 val validateEmail = email.text.toString().matches(emailRegex.toRegex())
+                val validatePassword = password.text.toString().length < 4
                 if (!validateEmail){
                     emailError.error = "Email inválido"
                 } else {
                     emailError.error = null
+                }
+                if (validatePassword){
+                    passwordError.error = "Senha deve ter mais de 4 caracteres"
+                } else {
+                    passwordError.error = null
                 }
                 return
             }

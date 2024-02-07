@@ -73,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:enabled="true"
                 android:hint="Senha"
+                app:errorEnabled="true"
                 app:endIconMode="password_toggle"
                 app:startIconContentDescription="password-icon"
                 app:startIconDrawable="@drawable/password_icon_24dp">
