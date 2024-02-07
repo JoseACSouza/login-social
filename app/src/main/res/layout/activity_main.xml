@@ -46,6 +46,8 @@
                 android:layout_height="wrap_content"
                 android:enabled="true"
                 android:hint="Email"
+                app:errorEnabled="true"
+                app:errorContentDescription="Email inválido"
                 app:startIconContentDescription="email-icon"
                 app:startIconDrawable="@drawable/email_icon_24dp">
 
@@ -60,6 +62,7 @@
                     android:singleLine="false"
                     android:visibility="visible"
                     app:textInputLayoutFocusedRectEnabled="false"
+                    app:errorEnabled="true"
                     tools:visibility="visible" />
 
             </com.google.android.material.textfield.TextInputLayout>
