@@ -50,6 +50,7 @@
                 app:startIconDrawable="@drawable/email_icon_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_text_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
@@ -74,6 +75,7 @@
                 app:startIconDrawable="@drawable/password_icon_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_text_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
@@ -94,7 +96,7 @@
                 android:backgroundTint="#4CAF50"
                 android:enabled="false"
                 android:text="Entrar"
-                app:rippleColor="#4CAF50" />
+                app:rippleColor="#FFFF" />
 
             <Button
                 android:id="@+id/forgot_password_button"
