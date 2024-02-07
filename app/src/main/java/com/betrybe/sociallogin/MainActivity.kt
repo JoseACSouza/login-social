@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -37,16 +38,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.login_button -> {
                 val emailRegex = "^[A-Za-z0-9.]+@[A-Za-z]+.[A-Za-z]+"
                 val validateEmail = email.text.toString().matches(emailRegex.toRegex())
-                val validatePassword = password.text.toString().length < 4
+                val validatePassword = password.text.toString().length > 4
                 if (!validateEmail){
                     emailError.error = "Email inválido"
                 } else {
                     emailError.error = null
                 }
-                if (validatePassword){
+                if (!validatePassword){
                     passwordError.error = "Senha deve ter mais de 4 caracteres"
                 } else {
                     passwordError.error = null
+                }
+                if(validateEmail && validatePassword){
+                    val contextView = findViewById<View>(R.id.main)
+                    Snackbar
+                        .make(contextView, "Login efetuado com sucesso", Snackbar.LENGTH_SHORT)
+                        .show()
                 }
                 return
             }
